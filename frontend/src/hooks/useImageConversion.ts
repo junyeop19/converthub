@@ -1,6 +1,5 @@
 import { useState, useCallback } from 'react';
 import { ImageConverter } from '@/utils/imageConverter';
-import { ImageCompressor } from '@/utils/imageCompressor';
 import type { ConversionOptions, ConversionResult } from '@/types/image.types';
 
 /**
@@ -21,21 +20,9 @@ export const useImageConversion = () => {
         // Step 1: Initial setup (10%)
         setProgress(10);
 
-        // Step 2: Compress if quality < 1 (30%)
-        let processedFile = file;
-
-        if (options.quality < 1) {
-          setProgress(20);
-          processedFile = await ImageCompressor.compressImage(file, {
-            quality: options.quality,
-            maxWidthOrHeight: options.width || options.height,
-          });
-          setProgress(30);
-        }
-
-        // Step 3: Convert format (70%)
-        setProgress(50);
-        const result = await ImageConverter.convertImage(processedFile, options);
+        // Step 2: Convert format with quality settings (Canvas API handles both)
+        setProgress(30);
+        const result = await ImageConverter.convertImage(file, options);
         setProgress(100);
 
         return result;
