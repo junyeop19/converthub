@@ -1,4 +1,4 @@
-import type { ImageFormat, ConversionOptions, ConversionResult } from '@/types/image.types';
+import type { ConversionOptions, ConversionResult } from '@/types/image.types';
 import { SUPPORTED_FORMATS } from '@/constants/formats';
 
 /**
