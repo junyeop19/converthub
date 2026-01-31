@@ -2,12 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/common/Button';
+import { SEO } from '@/components/Layout/SEO';
+import { pageSEO } from '@/utils/seoData';
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <>
+      <SEO {...pageSEO.home} />
+      <div className="max-w-4xl mx-auto">
       {/* Hero Section */}
       <div className="text-center mb-16">
         <h1 className="text-5xl font-bold text-gray-900 mb-4">
@@ -107,6 +111,7 @@ const Home: React.FC = () => {
         </Link>
       </div>
     </div>
+    </>
   );
 };
 
