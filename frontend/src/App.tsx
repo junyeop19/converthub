@@ -4,6 +4,9 @@ import { Footer } from '@/components/Layout/Footer';
 import Home from '@/pages/Home';
 import ImageConverter from '@/pages/ImageConverter';
 import BackgroundRemover from '@/pages/BackgroundRemover';
+import ImageToPdf from '@/pages/ImageToPdf';
+import ImageEditor from '@/pages/ImageEditor';
+import GifMaker from '@/pages/GifMaker';
 import About from '@/pages/About';
 import Privacy from '@/pages/Privacy';
 import Terms from '@/pages/Terms';
@@ -19,6 +22,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/image-converter" element={<ImageConverter />} />
             <Route path="/background-remover" element={<BackgroundRemover />} />
+            <Route path="/image-to-pdf" element={<ImageToPdf />} />
+            <Route path="/image-editor" element={<ImageEditor />} />
+            <Route path="/gif-maker" element={<GifMaker />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

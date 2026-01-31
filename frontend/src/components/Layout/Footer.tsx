@@ -40,6 +40,30 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/image-to-pdf"
+                  className="text-gray-600 hover:text-primary-500 text-sm transition-colors"
+                >
+                  {t('footer.links.imageToPdf')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/image-editor"
+                  className="text-gray-600 hover:text-primary-500 text-sm transition-colors"
+                >
+                  {t('footer.links.imageEditor')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/gif-maker"
+                  className="text-gray-600 hover:text-primary-500 text-sm transition-colors"
+                >
+                  {t('footer.links.gifMaker')}
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
                   className="text-gray-600 hover:text-primary-500 text-sm transition-colors"
                 >

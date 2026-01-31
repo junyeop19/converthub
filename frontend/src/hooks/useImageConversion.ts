@@ -20,11 +20,22 @@ export const useImageConversion = () => {
         // Step 1: Initial setup (10%)
         setProgress(10);
 
-        // Step 2: Convert format with quality settings (Canvas API handles both)
-        setProgress(30);
-        const result = await ImageConverter.convertImage(file, options);
-        setProgress(100);
+        let result: ConversionResult;
 
+        // Step 2: Choose conversion method based on compression mode
+        setProgress(30);
+        const mode = options.compressionMode || 'normal';
+
+        if (mode === 'target-size' && options.targetSizeKB) {
+          const targetSizeBytes = options.targetSizeKB * 1024;
+          result = await ImageConverter.compressToTargetSize(file, targetSizeBytes, options);
+        } else if (mode === 'smart') {
+          result = await ImageConverter.smartCompress(file, options);
+        } else {
+          result = await ImageConverter.convertImage(file, options);
+        }
+
+        setProgress(100);
         return result;
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : 'Conversion failed';

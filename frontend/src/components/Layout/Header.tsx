@@ -34,6 +34,24 @@ export const Header: React.FC = () => {
                 {t('nav.backgroundRemover')}
               </Link>
               <Link
+                to="/image-to-pdf"
+                className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
+              >
+                {t('nav.imageToPdf')}
+              </Link>
+              <Link
+                to="/image-editor"
+                className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
+              >
+                {t('nav.imageEditor')}
+              </Link>
+              <Link
+                to="/gif-maker"
+                className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
+              >
+                {t('nav.gifMaker')}
+              </Link>
+              <Link
                 to="/about"
                 className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
               >

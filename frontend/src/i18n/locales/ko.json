@@ -2,6 +2,9 @@
   "nav": {
     "imageConverter": "이미지 변환",
     "backgroundRemover": "배경 제거",
+    "imageToPdf": "이미지→PDF",
+    "imageEditor": "이미지 편집",
+    "gifMaker": "GIF 제작",
     "about": "소개"
   },
   "home": {
@@ -111,7 +114,25 @@
         "medium": "중간",
         "low": "낮음"
       },
-      "pngNote": "PNG는 무손실 포맷으로 품질이 항상 100%입니다"
+      "pngNote": "PNG는 무손실 포맷으로 품질이 항상 100%입니다",
+      "compressionMode": {
+        "label": "압축 모드",
+        "normal": "일반",
+        "normalDesc": "기본 압축",
+        "targetSize": "목표 크기",
+        "targetSizeDesc": "원하는 파일 크기로 압축",
+        "targetSizeLabel": "목표 파일 크기",
+        "smart": "스마트",
+        "smartDesc": "AI 자동 최적화"
+      }
+    },
+    "batch": {
+      "title": "일괄 압축",
+      "dragOrClick": "여러 이미지를 드래그하거나 클릭하세요",
+      "filesSelected": "{{count}}개 파일 선택됨",
+      "compress": "일괄 압축 및 다운로드",
+      "processing": "처리 중...",
+      "info": "여러 이미지를 한 번에 압축하여 ZIP 파일로 다운로드합니다. 선택한 옵션이 모든 이미지에 적용됩니다."
     },
     "preview": {
       "title": "미리보기",
@@ -152,6 +173,88 @@
       "firstUseNote": "첫 사용 시 AI 모델 다운로드로 시간이 소요될 수 있습니다."
     }
   },
+  "imageToPdf": {
+    "title": "이미지를 PDF로 변환",
+    "subtitle": "여러 이미지를 하나의 PDF 파일로 만드세요",
+    "dropHere": "여기에 이미지를 놓으세요",
+    "dragOrClick": "이미지를 드래그하거나 클릭하세요 (여러 파일 가능)",
+    "supportedFormats": "JPG, PNG, WebP 지원",
+    "imagesPreview": "이미지 미리보기",
+    "pageSize": "페이지 크기",
+    "moveUp": "위로 이동",
+    "moveDown": "아래로 이동",
+    "remove": "제거",
+    "convertToPdf": "PDF로 변환",
+    "converting": "변환 중...",
+    "conversionFailed": "변환 실패",
+    "reset": "초기화",
+    "errors": {
+      "fileTooLarge": "파일 크기가 너무 큽니다. 50MB 이하의 파일을 선택해주세요.",
+      "unsupportedFormat": "지원되지 않는 파일 형식입니다. JPG, PNG, WebP 파일만 가능합니다."
+    },
+    "info": {
+      "title": "알아두세요",
+      "multipleImages": "여러 이미지를 한 번에 업로드하여 하나의 PDF로 만들 수 있습니다.",
+      "reorder": "이미지 순서를 변경하려면 위/아래 화살표를 클릭하세요.",
+      "browserProcessing": "모든 처리는 브라우저에서 안전하게 진행됩니다. 파일이 서버로 전송되지 않습니다.",
+      "pageSizes": "A4, Letter, Legal 페이지 크기를 선택할 수 있습니다."
+    }
+  },
+  "imageEditor": {
+    "title": "이미지 편집",
+    "subtitle": "이미지를 자르고, 회전하고, 뒤집으세요",
+    "cropArea": "자르기 영역",
+    "zoom": "확대/축소",
+    "editControls": "편집 도구",
+    "rotation": "회전",
+    "rotateLeft": "왼쪽으로 90°",
+    "rotateRight": "오른쪽으로 90°",
+    "flip": "뒤집기",
+    "flipHorizontal": "좌우 뒤집기",
+    "flipVertical": "상하 뒤집기",
+    "applyEdits": "편집 적용",
+    "processing": "처리 중...",
+    "reset": "초기화",
+    "result": "결과",
+    "download": "다운로드",
+    "editAnother": "다른 이미지 편집",
+    "info": {
+      "title": "알아두세요",
+      "browserProcessing": "모든 처리는 브라우저에서 안전하게 진행됩니다. 파일이 서버로 전송되지 않습니다.",
+      "features": "자르기, 회전, 뒤집기 기능을 자유롭게 조합할 수 있습니다.",
+      "quality": "편집 후에도 원본 품질이 유지됩니다."
+    }
+  },
+  "gifMaker": {
+    "title": "GIF 제작",
+    "subtitle": "여러 이미지로 애니메이션 GIF를 만드세요",
+    "dropHere": "여기에 이미지를 놓으세요",
+    "dragOrClick": "여러 이미지를 드래그하거나 클릭하세요",
+    "supportedFormats": "JPG, PNG, WebP 지원",
+    "imagesPreview": "이미지 미리보기",
+    "reset": "초기화",
+    "options": {
+      "title": "GIF 옵션",
+      "frameDelay": "프레임 간격",
+      "width": "너비 (px)",
+      "height": "높이 (px)"
+    },
+    "createGif": "GIF 만들기",
+    "creating": "GIF 생성 중...",
+    "result": "결과",
+    "download": "다운로드",
+    "createAnother": "다른 GIF 만들기",
+    "errors": {
+      "minimumImages": "최소 2개의 이미지가 필요합니다."
+    },
+    "info": {
+      "title": "알아두세요",
+      "browserProcessing": "모든 처리는 브라우저에서 안전하게 진행됩니다. 파일이 서버로 전송되지 않습니다.",
+      "minimumImages": "GIF를 만들려면 최소 2개의 이미지가 필요합니다.",
+      "reorder": "위/아래 화살표로 이미지 순서를 변경할 수 있습니다.",
+      "frameDelay": "프레임 간격을 조절하여 애니메이션 속도를 변경할 수 있습니다."
+    }
+  },
   "footer": {
     "about": {
       "title": "ConvertHub",
@@ -161,6 +264,9 @@
       "title": "바로가기",
       "imageConverter": "이미지 변환",
       "backgroundRemover": "배경 제거",
+      "imageToPdf": "이미지→PDF",
+      "imageEditor": "이미지 편집",
+      "gifMaker": "GIF 제작",
       "about": "소개"
     },
     "legal": {

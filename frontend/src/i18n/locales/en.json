@@ -2,6 +2,9 @@
   "nav": {
     "imageConverter": "Image Converter",
     "backgroundRemover": "Background Remover",
+    "imageToPdf": "Images to PDF",
+    "imageEditor": "Image Editor",
+    "gifMaker": "GIF Maker",
     "about": "About"
   },
   "home": {
@@ -111,7 +114,25 @@
         "medium": "Medium",
         "low": "Low"
       },
-      "pngNote": "PNG is a lossless format with 100% quality always"
+      "pngNote": "PNG is a lossless format with 100% quality always",
+      "compressionMode": {
+        "label": "Compression Mode",
+        "normal": "Normal",
+        "normalDesc": "Standard compression",
+        "targetSize": "Target Size",
+        "targetSizeDesc": "Compress to desired file size",
+        "targetSizeLabel": "Target File Size",
+        "smart": "Smart",
+        "smartDesc": "AI automatic optimization"
+      }
+    },
+    "batch": {
+      "title": "Batch Compression",
+      "dragOrClick": "Drag & drop multiple images or click to upload",
+      "filesSelected": "{{count}} files selected",
+      "compress": "Compress All & Download",
+      "processing": "Processing...",
+      "info": "Compress multiple images at once and download as a ZIP file. Selected options will be applied to all images."
     },
     "preview": {
       "title": "Preview",
@@ -152,6 +173,88 @@
       "firstUseNote": "First use may take longer as the AI model downloads (one-time only)."
     }
   },
+  "imageToPdf": {
+    "title": "Images to PDF",
+    "subtitle": "Convert multiple images into a single PDF file",
+    "dropHere": "Drop images here",
+    "dragOrClick": "Drag & drop images or click to upload (multiple files)",
+    "supportedFormats": "Supports JPG, PNG, WebP",
+    "imagesPreview": "Images Preview",
+    "pageSize": "Page Size",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "remove": "Remove",
+    "convertToPdf": "Convert to PDF",
+    "converting": "Converting...",
+    "conversionFailed": "Conversion Failed",
+    "reset": "Reset",
+    "errors": {
+      "fileTooLarge": "File size is too large. Please select files under 50MB.",
+      "unsupportedFormat": "Unsupported file format. Only JPG, PNG, and WebP files are allowed."
+    },
+    "info": {
+      "title": "Important Information",
+      "multipleImages": "Upload multiple images at once to create a single PDF file.",
+      "reorder": "Click the up/down arrows to reorder images in the PDF.",
+      "browserProcessing": "All processing happens securely in your browser. Your files are never sent to a server.",
+      "pageSizes": "Choose from A4, Letter, or Legal page sizes."
+    }
+  },
+  "imageEditor": {
+    "title": "Image Editor",
+    "subtitle": "Crop, rotate, and flip your images",
+    "cropArea": "Crop Area",
+    "zoom": "Zoom",
+    "editControls": "Edit Controls",
+    "rotation": "Rotation",
+    "rotateLeft": "Rotate Left 90°",
+    "rotateRight": "Rotate Right 90°",
+    "flip": "Flip",
+    "flipHorizontal": "Flip Horizontal",
+    "flipVertical": "Flip Vertical",
+    "applyEdits": "Apply Edits",
+    "processing": "Processing...",
+    "reset": "Reset",
+    "result": "Result",
+    "download": "Download",
+    "editAnother": "Edit Another Image",
+    "info": {
+      "title": "Important Information",
+      "browserProcessing": "All processing happens securely in your browser. Your files are never sent to a server.",
+      "features": "Freely combine crop, rotate, and flip operations.",
+      "quality": "Original quality is maintained after editing."
+    }
+  },
+  "gifMaker": {
+    "title": "GIF Maker",
+    "subtitle": "Create animated GIFs from multiple images",
+    "dropHere": "Drop images here",
+    "dragOrClick": "Drag & drop multiple images or click to upload",
+    "supportedFormats": "Supports JPG, PNG, WebP",
+    "imagesPreview": "Images Preview",
+    "reset": "Reset",
+    "options": {
+      "title": "GIF Options",
+      "frameDelay": "Frame Delay",
+      "width": "Width (px)",
+      "height": "Height (px)"
+    },
+    "createGif": "Create GIF",
+    "creating": "Creating GIF...",
+    "result": "Result",
+    "download": "Download",
+    "createAnother": "Create Another GIF",
+    "errors": {
+      "minimumImages": "At least 2 images are required."
+    },
+    "info": {
+      "title": "Important Information",
+      "browserProcessing": "All processing happens securely in your browser. Your files are never sent to a server.",
+      "minimumImages": "At least 2 images are required to create a GIF.",
+      "reorder": "Use up/down arrows to reorder images.",
+      "frameDelay": "Adjust frame delay to change animation speed."
+    }
+  },
   "footer": {
     "about": {
       "title": "ConvertHub",
@@ -161,6 +264,9 @@
       "title": "Quick Links",
       "imageConverter": "Image Converter",
       "backgroundRemover": "Background Remover",
+      "imageToPdf": "Images to PDF",
+      "imageEditor": "Image Editor",
+      "gifMaker": "GIF Maker",
       "about": "About"
     },
     "legal": {

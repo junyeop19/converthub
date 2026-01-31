@@ -15,6 +15,11 @@ export interface ImageFile {
 }
 
 /**
+ * Compression mode types
+ */
+export type CompressionMode = 'normal' | 'target-size' | 'smart';
+
+/**
  * Image conversion options
  */
 export interface ConversionOptions {
@@ -23,6 +28,8 @@ export interface ConversionOptions {
   width?: number;
   height?: number;
   maintainAspectRatio: boolean;
+  compressionMode?: CompressionMode;
+  targetSizeKB?: number;
 }
 
 /**

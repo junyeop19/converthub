@@ -4,6 +4,7 @@ import { ImageUploader } from '@/components/ImageConverter/ImageUploader';
 import { ConversionOptionsComponent } from '@/components/ImageConverter/ConversionOptions';
 import { ImagePreview } from '@/components/ImageConverter/ImagePreview';
 import { DownloadButton } from '@/components/ImageConverter/DownloadButton';
+import { BatchCompressor } from '@/components/ImageConverter/BatchCompressor';
 import { Button } from '@/components/common/Button';
 import { Card } from '@/components/common/Card';
 import { useFileUpload } from '@/hooks/useFileUpload';
@@ -284,6 +285,9 @@ const ImageConverterPage: React.FC = () => {
           </ul>
         </div>
       </Card>
+
+      {/* Batch Compression Section */}
+      <BatchCompressor options={options} />
     </div>
   );
 };

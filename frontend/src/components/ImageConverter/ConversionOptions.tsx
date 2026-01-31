@@ -39,6 +39,70 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
         </div>
       </div>
 
+      {/* Compression Mode Selection */}
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          {t('converter.options.compressionMode.label')}
+        </label>
+        <div className="grid grid-cols-3 gap-3">
+          <button
+            onClick={() => onChange({ ...options, compressionMode: 'normal' })}
+            className={`p-3 rounded-lg border-2 transition-all ${
+              (options.compressionMode || 'normal') === 'normal'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
+                : 'border-gray-200 hover:border-primary-300'
+            }`}
+          >
+            <div className="font-semibold text-sm">{t('converter.options.compressionMode.normal')}</div>
+            <div className="text-xs text-gray-500 mt-1">{t('converter.options.compressionMode.normalDesc')}</div>
+          </button>
+          <button
+            onClick={() => onChange({ ...options, compressionMode: 'target-size' })}
+            className={`p-3 rounded-lg border-2 transition-all ${
+              options.compressionMode === 'target-size'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
+                : 'border-gray-200 hover:border-primary-300'
+            }`}
+          >
+            <div className="font-semibold text-sm">{t('converter.options.compressionMode.targetSize')}</div>
+            <div className="text-xs text-gray-500 mt-1">{t('converter.options.compressionMode.targetSizeDesc')}</div>
+          </button>
+          <button
+            onClick={() => onChange({ ...options, compressionMode: 'smart' })}
+            className={`p-3 rounded-lg border-2 transition-all ${
+              options.compressionMode === 'smart'
+                ? 'border-primary-500 bg-primary-50 text-primary-700'
+                : 'border-gray-200 hover:border-primary-300'
+            }`}
+          >
+            <div className="font-semibold text-sm">{t('converter.options.compressionMode.smart')}</div>
+            <div className="text-xs text-gray-500 mt-1">{t('converter.options.compressionMode.smartDesc')}</div>
+          </button>
+        </div>
+
+        {/* Target Size Input */}
+        {options.compressionMode === 'target-size' && (
+          <div className="mt-3">
+            <label className="block text-xs text-gray-600 mb-1">
+              {t('converter.options.compressionMode.targetSizeLabel')}
+            </label>
+            <div className="flex items-center gap-2">
+              <input
+                type="number"
+                min="10"
+                max="50000"
+                value={options.targetSizeKB || 500}
+                onChange={(e) =>
+                  onChange({ ...options, targetSizeKB: parseInt(e.target.value) || 500 })
+                }
+                className="flex-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              />
+              <span className="text-sm text-gray-600">KB</span>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Quality Selection */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
