@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ImageUploader } from '@/components/ImageConverter/ImageUploader';
 import { ConversionOptionsComponent } from '@/components/ImageConverter/ConversionOptions';
 import { ImagePreview } from '@/components/ImageConverter/ImagePreview';
@@ -16,6 +17,7 @@ const DEFAULT_OPTIONS: ConversionOptions = {
 };
 
 const ImageConverterPage: React.FC = () => {
+  const { t } = useTranslation();
   const { uploadedFile, handleFileSelect: uploadFile, clearFile, error: uploadError } = useFileUpload();
   const { convertImage, isConverting, progress, error: conversionError } = useImageConversion();
   const [options, setOptions] = useState<ConversionOptions>(DEFAULT_OPTIONS);
@@ -54,9 +56,9 @@ const ImageConverterPage: React.FC = () => {
     <div className="max-w-6xl mx-auto space-y-8">
       {/* Page Header */}
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">이미지 변환</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('converter.title')}</h1>
         <p className="text-lg text-gray-600">
-          이미지를 다른 포맷으로 변환하고 크기를 조절하세요
+          {t('converter.subtitle')}
         </p>
       </div>
 
@@ -81,7 +83,7 @@ const ImageConverterPage: React.FC = () => {
                   />
                 </svg>
                 <div>
-                  <h3 className="text-sm font-medium text-red-800">업로드 실패</h3>
+                  <h3 className="text-sm font-medium text-red-800">{t('converter.uploadFailed')}</h3>
                   <p className="text-sm text-red-700 mt-1">{uploadError}</p>
                 </div>
               </div>
@@ -95,7 +97,7 @@ const ImageConverterPage: React.FC = () => {
         <>
           {/* Conversion Options */}
           <Card>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">변환 옵션</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('converter.conversionOptions')}</h2>
             <ConversionOptionsComponent
               options={options}
               onChange={setOptions}
@@ -123,7 +125,7 @@ const ImageConverterPage: React.FC = () => {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                   </svg>
-                  변환 중... {progress}%
+                  {t('converter.converting')} {progress}%
                 </>
               ) : (
                 <>
@@ -140,7 +142,7 @@ const ImageConverterPage: React.FC = () => {
                       d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                     />
                   </svg>
-                  변환하기
+                  {t('converter.convert')}
                 </>
               )}
             </Button>
@@ -173,7 +175,7 @@ const ImageConverterPage: React.FC = () => {
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
-              초기화
+              {t('converter.reset')}
             </Button>
           </div>
 
@@ -195,7 +197,7 @@ const ImageConverterPage: React.FC = () => {
                   />
                 </svg>
                 <div>
-                  <h3 className="text-sm font-medium text-red-800">변환 실패</h3>
+                  <h3 className="text-sm font-medium text-red-800">{t('converter.conversionFailed')}</h3>
                   <p className="text-sm text-red-700 mt-1">{conversionError}</p>
                 </div>
               </div>
@@ -207,7 +209,7 @@ const ImageConverterPage: React.FC = () => {
       {/* Info Section */}
       <Card>
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-gray-900">알아두세요</h3>
+          <h3 className="text-lg font-semibold text-gray-900">{t('converter.info.title')}</h3>
           <ul className="space-y-2 text-sm text-gray-600">
             <li className="flex items-start">
               <svg
@@ -224,7 +226,7 @@ const ImageConverterPage: React.FC = () => {
                 />
               </svg>
               <span>
-                파일은 브라우저에서 직접 처리되며 서버로 전송되지 않습니다.
+                {t('converter.info.security')}
               </span>
             </li>
             <li className="flex items-start">
@@ -241,7 +243,7 @@ const ImageConverterPage: React.FC = () => {
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span>최대 파일 크기는 50MB입니다.</span>
+              <span>{t('converter.info.maxSize')}</span>
             </li>
             <li className="flex items-start">
               <svg
@@ -258,7 +260,7 @@ const ImageConverterPage: React.FC = () => {
                 />
               </svg>
               <span>
-                지원 포맷: JPG, PNG, WebP
+                {t('converter.info.formats')}
               </span>
             </li>
             <li className="flex items-start">
@@ -276,7 +278,7 @@ const ImageConverterPage: React.FC = () => {
                 />
               </svg>
               <span>
-                품질을 낮추면 파일 크기가 줄어들지만 화질이 저하될 수 있습니다.
+                {t('converter.info.quality')}
               </span>
             </li>
           </ul>

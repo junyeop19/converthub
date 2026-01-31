@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "imageConverter": "Image Converter",
+    "about": "About"
+  },
+  "home": {
+    "hero": {
+      "title": "Free Image Converter",
+      "subtitle": "Convert images quickly and securely",
+      "highlight": "Files are processed directly in your browser",
+      "cta": "Get Started"
+    },
+    "features": {
+      "security": {
+        "title": "Perfect Security",
+        "description": "Your files are never sent to a server. Everything is processed directly in your browser, keeping your privacy intact."
+      },
+      "speed": {
+        "title": "Fast Processing",
+        "description": "No upload required for lightning-fast conversion. Get instant results without any waiting time."
+      },
+      "free": {
+        "title": "Completely Free",
+        "description": "No sign-up required. Convert as many images as you want without any limits."
+      }
+    },
+    "formats": {
+      "title": "Supported Formats",
+      "jpg": {
+        "title": "JPG / JPEG",
+        "description": "The most widely used compressed format on the web. Perfect for photos."
+      },
+      "png": {
+        "title": "PNG",
+        "description": "Lossless compression format with transparency support. Ideal for logos and graphics."
+      },
+      "webp": {
+        "title": "WebP",
+        "description": "Modern web image format. Smaller file sizes for faster loading."
+      }
+    },
+    "cta": {
+      "title": "Start Converting Now",
+      "subtitle": "Simple and fast image conversion",
+      "button": "Convert Images"
+    }
+  },
+  "converter": {
+    "title": "Image Converter",
+    "subtitle": "Convert images to different formats and adjust sizes",
+    "uploadFailed": "Upload Failed",
+    "conversionOptions": "Conversion Options",
+    "conversionFailed": "Conversion Failed",
+    "info": {
+      "title": "Important Information",
+      "security": "Files are processed directly in your browser and never sent to a server.",
+      "maxSize": "Maximum file size is 50MB.",
+      "formats": "Supported formats: JPG, PNG, WebP",
+      "quality": "Lowering quality reduces file size but may decrease image quality."
+    },
+    "upload": {
+      "dropHere": "Drop the image here",
+      "drag": "Drag & drop an image or",
+      "click": "click to upload",
+      "dragOrClick": "Drag & drop an image or click to upload",
+      "supported": "Supported formats: JPG, PNG, WebP",
+      "maxSize": "JPG, PNG, WebP (Max {{maxSize}})",
+      "errors": {
+        "fileTooLarge": "File size is too large. Please select a file under 50MB.",
+        "unsupportedFormat": "This file format is not supported. Only JPG, PNG, and WebP files are allowed."
+      }
+    },
+    "options": {
+      "format": "Output Format",
+      "quality": "Quality",
+      "size": "Size",
+      "maintain": "Maintain Aspect Ratio",
+      "width": "Width",
+      "height": "Height",
+      "widthPlaceholder": "Auto",
+      "heightPlaceholder": "Auto",
+      "widthLabel": "Width (px)",
+      "heightLabel": "Height (px)",
+      "formats": {
+        "jpg": {
+          "label": "JPG",
+          "description": "For photos"
+        },
+        "png": {
+          "label": "PNG",
+          "description": "Lossless, transparent"
+        },
+        "webp": {
+          "label": "WebP",
+          "description": "Modern format"
+        }
+      },
+      "presets": {
+        "original": "Original Size",
+        "instagramSquare": "Instagram Square (1080x1080)",
+        "instagramVertical": "Instagram Vertical (1080x1350)",
+        "facebookCover": "Facebook Cover (820x312)",
+        "twitterHeader": "Twitter Header (1500x500)",
+        "youtubeThumbnail": "YouTube Thumbnail (1280x720)",
+        "hd": "HD (1920x1080)",
+        "custom": "Custom"
+      },
+      "qualityPresets": {
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "pngNote": "PNG is a lossless format with 100% quality always"
+    },
+    "preview": {
+      "title": "Preview",
+      "original": "Original",
+      "converted": "Converted",
+      "filename": "Filename",
+      "size": "Size",
+      "format": "Format",
+      "decreased": "decreased",
+      "increased": "increased",
+      "selectOptionsMessage": "Select conversion options and click the convert button",
+      "before": "Before",
+      "after": "After"
+    },
+    "convert": "Convert",
+    "converting": "Converting...",
+    "download": "Download",
+    "reset": "Reset"
+  },
+  "footer": {
+    "about": {
+      "title": "ConvertHub",
+      "description": "Free online file converter. Convert your files quickly and securely."
+    },
+    "links": {
+      "title": "Quick Links",
+      "imageConverter": "Image Converter",
+      "about": "About"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© {{year}} ConvertHub. All rights reserved.",
+    "security": "Files are processed directly in your browser and never sent to a server."
+  }
+}

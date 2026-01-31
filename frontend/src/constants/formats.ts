@@ -55,41 +55,49 @@ export const QUALITY_PRESETS = {
  */
 export const SIZE_PRESETS: SizePreset[] = [
   {
+    key: 'original',
     label: '원본 크기',
     width: null,
     height: null,
   },
   {
+    key: 'instagramSquare',
     label: 'Instagram 정사각형 (1080x1080)',
     width: 1080,
     height: 1080,
   },
   {
+    key: 'instagramVertical',
     label: 'Instagram 세로 (1080x1350)',
     width: 1080,
     height: 1350,
   },
   {
+    key: 'facebookCover',
     label: 'Facebook 커버 (820x312)',
     width: 820,
     height: 312,
   },
   {
+    key: 'twitterHeader',
     label: 'Twitter 헤더 (1500x500)',
     width: 1500,
     height: 500,
   },
   {
+    key: 'youtubeThumbnail',
     label: 'YouTube 썸네일 (1280x720)',
     width: 1280,
     height: 720,
   },
   {
+    key: 'hd',
     label: 'HD (1920x1080)',
     width: 1920,
     height: 1080,
   },
   {
+    key: 'custom',
     label: '사용자 지정',
     width: null,
     height: null,

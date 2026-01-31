@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import type { ImageFormat, ConversionOptions } from '@/types/image.types';
 import { SUPPORTED_FORMATS, QUALITY_PRESETS, SIZE_PRESETS } from '@/constants/formats';
 
@@ -13,13 +14,15 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
   onChange,
   originalDimensions,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="space-y-6">
       {/* Format Selection */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">출력 포맷</label>
+        <label className="block text-sm font-medium text-gray-700 mb-2">{t('converter.options.format')}</label>
         <div className="grid grid-cols-3 gap-3">
-          {Object.entries(SUPPORTED_FORMATS).map(([key, format]) => (
+          {Object.keys(SUPPORTED_FORMATS).map((key) => (
             <button
               key={key}
               onClick={() => onChange({ ...options, format: key as ImageFormat })}
@@ -29,8 +32,8 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
                   : 'border-gray-200 hover:border-primary-300'
               }`}
             >
-              <div className="font-semibold">{format.label}</div>
-              <div className="text-xs text-gray-500 mt-1">{format.description}</div>
+              <div className="font-semibold">{t(`converter.options.formats.${key}.label`)}</div>
+              <div className="text-xs text-gray-500 mt-1">{t(`converter.options.formats.${key}.description`)}</div>
             </button>
           ))}
         </div>
@@ -39,11 +42,11 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
       {/* Quality Selection */}
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          품질 ({Math.round(options.quality * 100)}%)
+          {t('converter.options.quality')} ({Math.round(options.quality * 100)}%)
         </label>
         {options.format === 'png' && (
           <div className="mb-2 p-2 bg-blue-50 border border-blue-200 rounded text-xs text-blue-700">
-            PNG는 무손실 포맷으로 품질이 항상 100%입니다
+            {t('converter.options.pngNote')}
           </div>
         )}
         <input
@@ -74,7 +77,7 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                {preset.label}
+                {t(`converter.options.qualityPresets.${key}`)}
               </button>
             ))}
         </div>
@@ -82,7 +85,7 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
 
       {/* Size Selection */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">크기</label>
+        <label className="block text-sm font-medium text-gray-700 mb-2">{t('converter.options.size')}</label>
         <select
           value={
             options.width && options.height
@@ -115,13 +118,11 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
               value={
                 preset.width && preset.height
                   ? `${preset.width}x${preset.height}`
-                  : preset.label === '사용자 지정'
-                  ? 'custom'
-                  : 'original'
+                  : preset.key
               }
             >
-              {preset.label}
-              {originalDimensions && !preset.width && !preset.height && preset.label === '원본 크기'
+              {t(`converter.options.presets.${preset.key}`)}
+              {originalDimensions && !preset.width && !preset.height && preset.key === 'original'
                 ? ` (${originalDimensions.width}x${originalDimensions.height})`
                 : ''}
             </option>
@@ -131,10 +132,10 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
         {/* Custom size inputs */}
         <div className="grid grid-cols-2 gap-3 mt-3">
           <div>
-            <label className="block text-xs text-gray-600 mb-1">너비 (px)</label>
+            <label className="block text-xs text-gray-600 mb-1">{t('converter.options.widthLabel')}</label>
             <input
               type="number"
-              placeholder="자동"
+              placeholder={t('converter.options.widthPlaceholder')}
               value={options.width || ''}
               onChange={(e) =>
                 onChange({
@@ -146,10 +147,10 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
             />
           </div>
           <div>
-            <label className="block text-xs text-gray-600 mb-1">높이 (px)</label>
+            <label className="block text-xs text-gray-600 mb-1">{t('converter.options.heightLabel')}</label>
             <input
               type="number"
-              placeholder="자동"
+              placeholder={t('converter.options.heightPlaceholder')}
               value={options.height || ''}
               onChange={(e) =>
                 onChange({
@@ -172,7 +173,7 @@ export const ConversionOptionsComponent: React.FC<ConversionOptionsProps> = ({
             }
             className="w-4 h-4 text-primary-500 border-gray-300 rounded focus:ring-primary-500"
           />
-          <span className="ml-2 text-sm text-gray-700">비율 유지</span>
+          <span className="ml-2 text-sm text-gray-700">{t('converter.options.maintain')}</span>
         </label>
       </div>
     </div>

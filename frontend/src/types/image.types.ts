@@ -39,6 +39,7 @@ export interface ConversionResult {
  * Size preset for common use cases
  */
 export interface SizePreset {
+  key: string;
   label: string;
   width: number | null;
   height: number | null;

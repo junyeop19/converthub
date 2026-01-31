@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitch } from './LanguageSwitch';
 
 export const Header: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <header className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
@@ -15,32 +19,36 @@ export const Header: React.FC = () => {
             </h1>
           </Link>
 
-          <nav className="hidden md:flex space-x-6">
-            <Link
-              to="/image-converter"
-              className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
-            >
-              이미지 변환
-            </Link>
-            <Link
-              to="/about"
-              className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
-            >
-              소개
-            </Link>
-          </nav>
+          <div className="flex items-center space-x-4">
+            <nav className="hidden md:flex space-x-6">
+              <Link
+                to="/image-converter"
+                className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
+              >
+                {t('nav.imageConverter')}
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
+              >
+                {t('nav.about')}
+              </Link>
+            </nav>
 
-          {/* Mobile menu button */}
-          <button className="md:hidden p-2 text-gray-600 hover:text-primary-500">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+            <LanguageSwitch />
+
+            {/* Mobile menu button */}
+            <button className="md:hidden p-2 text-gray-600 hover:text-primary-500">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </header>

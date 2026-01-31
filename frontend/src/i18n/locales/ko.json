@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "imageConverter": "이미지 변환",
+    "about": "소개"
+  },
+  "home": {
+    "hero": {
+      "title": "무료 이미지 변환 도구",
+      "subtitle": "빠르고 안전하게 이미지를 변환하세요",
+      "highlight": "파일은 브라우저에서 직접 처리됩니다",
+      "cta": "지금 시작하기"
+    },
+    "features": {
+      "security": {
+        "title": "완벽한 보안",
+        "description": "파일이 서버로 전송되지 않습니다. 브라우저에서 직접 처리되어 개인정보가 안전합니다."
+      },
+      "speed": {
+        "title": "빠른 처리",
+        "description": "업로드가 필요 없어 빠르게 변환됩니다. 대기 시간 없이 즉시 결과를 확인하세요."
+      },
+      "free": {
+        "title": "완전 무료",
+        "description": "회원가입 없이 무료로 사용하세요. 제한 없이 원하는 만큼 변환할 수 있습니다."
+      }
+    },
+    "formats": {
+      "title": "지원 포맷",
+      "jpg": {
+        "title": "JPG / JPEG",
+        "description": "웹에서 가장 많이 사용되는 압축 포맷. 사진에 적합합니다."
+      },
+      "png": {
+        "title": "PNG",
+        "description": "투명 배경을 지원하는 무손실 압축 포맷. 로고와 그래픽에 적합합니다."
+      },
+      "webp": {
+        "title": "WebP",
+        "description": "최신 웹 이미지 포맷. 작은 파일 크기로 빠른 로딩이 가능합니다."
+      }
+    },
+    "cta": {
+      "title": "지금 바로 시작하세요",
+      "subtitle": "간단하고 빠르게 이미지를 변환하세요",
+      "button": "이미지 변환하기"
+    }
+  },
+  "converter": {
+    "title": "이미지 변환",
+    "subtitle": "이미지를 다른 포맷으로 변환하고 크기를 조절하세요",
+    "uploadFailed": "업로드 실패",
+    "conversionOptions": "변환 옵션",
+    "conversionFailed": "변환 실패",
+    "info": {
+      "title": "알아두세요",
+      "security": "파일은 브라우저에서 직접 처리되며 서버로 전송되지 않습니다.",
+      "maxSize": "최대 파일 크기는 50MB입니다.",
+      "formats": "지원 포맷: JPG, PNG, WebP",
+      "quality": "품질을 낮추면 파일 크기가 줄어들지만 화질이 저하될 수 있습니다."
+    },
+    "upload": {
+      "dropHere": "여기에 이미지를 놓으세요",
+      "drag": "이미지를 드래그하거나",
+      "click": "클릭하세요",
+      "dragOrClick": "이미지를 드래그하거나 클릭하세요",
+      "supported": "지원 포맷: JPG, PNG, WebP",
+      "maxSize": "JPG, PNG, WebP (최대 {{maxSize}})",
+      "errors": {
+        "fileTooLarge": "파일 크기가 너무 큽니다. 50MB 이하의 파일을 선택해주세요.",
+        "unsupportedFormat": "이 파일 형식은 지원되지 않습니다. JPG, PNG, WebP 파일만 가능합니다."
+      }
+    },
+    "options": {
+      "format": "출력 포맷",
+      "quality": "품질",
+      "size": "크기",
+      "maintain": "비율 유지",
+      "width": "너비",
+      "height": "높이",
+      "widthPlaceholder": "자동",
+      "heightPlaceholder": "자동",
+      "widthLabel": "너비 (px)",
+      "heightLabel": "높이 (px)",
+      "formats": {
+        "jpg": {
+          "label": "JPG",
+          "description": "사진용 압축"
+        },
+        "png": {
+          "label": "PNG",
+          "description": "무손실, 투명"
+        },
+        "webp": {
+          "label": "WebP",
+          "description": "최신 포맷"
+        }
+      },
+      "presets": {
+        "original": "원본 크기",
+        "instagramSquare": "Instagram 정사각형 (1080x1080)",
+        "instagramVertical": "Instagram 세로 (1080x1350)",
+        "facebookCover": "Facebook 커버 (820x312)",
+        "twitterHeader": "Twitter 헤더 (1500x500)",
+        "youtubeThumbnail": "YouTube 썸네일 (1280x720)",
+        "hd": "HD (1920x1080)",
+        "custom": "사용자 지정"
+      },
+      "qualityPresets": {
+        "high": "높음",
+        "medium": "중간",
+        "low": "낮음"
+      },
+      "pngNote": "PNG는 무손실 포맷으로 품질이 항상 100%입니다"
+    },
+    "preview": {
+      "title": "미리보기",
+      "original": "원본",
+      "converted": "변환됨",
+      "filename": "파일명",
+      "size": "크기",
+      "format": "포맷",
+      "decreased": "감소",
+      "increased": "증가",
+      "selectOptionsMessage": "변환 옵션을 선택하고 변환 버튼을 클릭하세요",
+      "before": "변환 전",
+      "after": "변환 후"
+    },
+    "convert": "변환하기",
+    "converting": "변환 중...",
+    "download": "다운로드",
+    "reset": "초기화"
+  },
+  "footer": {
+    "about": {
+      "title": "ConvertHub",
+      "description": "무료 온라인 파일 변환 도구. 빠르고 안전하게 파일을 변환하세요."
+    },
+    "links": {
+      "title": "바로가기",
+      "imageConverter": "이미지 변환",
+      "about": "소개"
+    },
+    "legal": {
+      "title": "법적 고지",
+      "privacy": "개인정보처리방침",
+      "terms": "이용약관"
+    },
+    "copyright": "© {{year}} ConvertHub. All rights reserved.",
+    "security": "파일은 브라우저에서 직접 처리되며 서버로 전송되지 않습니다."
+  }
+}
