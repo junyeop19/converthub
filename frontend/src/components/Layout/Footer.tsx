@@ -32,6 +32,14 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/background-remover"
+                  className="text-gray-600 hover:text-primary-500 text-sm transition-colors"
+                >
+                  {t('footer.links.backgroundRemover')}
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
                   className="text-gray-600 hover:text-primary-500 text-sm transition-colors"
                 >

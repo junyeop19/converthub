@@ -3,6 +3,7 @@ import { Header } from '@/components/Layout/Header';
 import { Footer } from '@/components/Layout/Footer';
 import Home from '@/pages/Home';
 import ImageConverter from '@/pages/ImageConverter';
+import BackgroundRemover from '@/pages/BackgroundRemover';
 import About from '@/pages/About';
 import Privacy from '@/pages/Privacy';
 import Terms from '@/pages/Terms';
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/image-converter" element={<ImageConverter />} />
+            <Route path="/background-remover" element={<BackgroundRemover />} />
             <Route path="/about" element={<About />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

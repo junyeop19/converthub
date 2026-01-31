@@ -28,6 +28,12 @@ export const Header: React.FC = () => {
                 {t('nav.imageConverter')}
               </Link>
               <Link
+                to="/background-remover"
+                className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
+              >
+                {t('nav.backgroundRemover')}
+              </Link>
+              <Link
                 to="/about"
                 className="text-gray-700 hover:text-primary-500 font-medium transition-colors"
               >

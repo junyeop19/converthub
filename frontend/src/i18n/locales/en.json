@@ -1,6 +1,7 @@
 {
   "nav": {
     "imageConverter": "Image Converter",
+    "backgroundRemover": "Background Remover",
     "about": "About"
   },
   "home": {
@@ -130,6 +131,27 @@
     "download": "Download",
     "reset": "Reset"
   },
+  "backgroundRemover": {
+    "title": "Background Remover",
+    "subtitle": "Remove image backgrounds automatically with AI",
+    "uploadFailed": "Upload Failed",
+    "preview": "Preview",
+    "original": "Original",
+    "result": "Result",
+    "clickToProcess": "Click the remove background button to process",
+    "removeBackground": "Remove Background",
+    "processing": "Processing...",
+    "processingFailed": "Processing Failed",
+    "download": "Download",
+    "reset": "Reset",
+    "info": {
+      "title": "Important Information",
+      "browserProcessing": "All processing happens securely in your browser. Your files are never sent to a server.",
+      "aiPowered": "AI-powered background removal technology provides accurate results.",
+      "pngOutput": "Results are saved as PNG files with transparent backgrounds.",
+      "firstUseNote": "First use may take longer as the AI model downloads (one-time only)."
+    }
+  },
   "footer": {
     "about": {
       "title": "ConvertHub",
@@ -138,6 +160,7 @@
     "links": {
       "title": "Quick Links",
       "imageConverter": "Image Converter",
+      "backgroundRemover": "Background Remover",
       "about": "About"
     },
     "legal": {
